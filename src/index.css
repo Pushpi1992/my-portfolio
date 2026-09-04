@@ -4,6 +4,7 @@
   --bg-card-hover: #131522;
   --bg-card-border: rgba(255, 255, 255, 0.07);
   --bg-card-border-hover: rgba(124, 92, 255, 0.5);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   
   --primary: #6355f6;
   --primary-hover: #7568f8;
@@ -18,9 +19,55 @@
   --text-body: #9297a9;
   --text-muted: #5d6377;
   
+  --navbar-bg: rgba(9, 10, 16, 0.88);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --drawer-bg: #090a10;
+  --btn-secondary-bg: #11121c;
+  --btn-secondary-text: #ffffff;
+  --btn-secondary-border: rgba(121, 102, 249, 0.32);
+  --footer-border: rgba(255, 255, 255, 0.06);
+  
+  --switcher-bg: #11131e;
+  --switcher-border: rgba(255, 255, 255, 0.12);
+  --switcher-color: #f3f4f8;
+  
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Fira Code', monospace;
   --font-handwriting: 'Caveat', cursive;
+}
+
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-card-border: #e2e8f0;
+  --bg-card-border-hover: #6366f1;
+  --card-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.3);
+  --accent-purple: #4f46e5;
+  --accent-soft: #4338ca;
+  --accent-tag-bg: #eef2ff;
+  --accent-tag-text: #4338ca;
+  
+  --text-white: #0f172a;
+  --text-heading: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  
+  --navbar-bg: #ffffff;
+  --navbar-border: #e2e8f0;
+  --drawer-bg: #ffffff;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-text: #0f172a;
+  --btn-secondary-border: #cbd5e1;
+  --footer-border: #e2e8f0;
+  
+  --switcher-bg: #f1f5f9;
+  --switcher-border: #cbd5e1;
+  --switcher-color: #0f172a;
 }
 
 * {
@@ -36,6 +83,7 @@ html {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 body {
@@ -45,6 +93,7 @@ body {
   color: var(--text-white);
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #root {
